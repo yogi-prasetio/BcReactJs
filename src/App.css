@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+a{text-decoration: none; font-size: 20px;font-family: sans-serif;padding: 14px 10px; margin-top: 14px;}
+ul{margin-top: 14px}
+li{list-style: none; display: inline;}
+li a{background: #222; color:#d4d4d4;}
+li a:hover{background: #4da4ff; color:#fff;}
+.navi{background: #222; height: 50px}
