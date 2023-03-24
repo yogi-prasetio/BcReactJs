@@ -9,6 +9,7 @@ const navigate = [
     { name: 'Location ', href: 'location', current: false },
     { name: 'Department ', href: 'department', current: false },
     { name: 'Employee ', href: 'employee', current: false },
+    { name: 'Job ', href: 'job', current: false },
     { name: 'User ', href: 'user', current: false }
 ]
 export default function Dashboard() {

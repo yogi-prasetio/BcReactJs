@@ -3,7 +3,7 @@ import config from "../config/config";
 
 const create = async (payload) => {
     try {
-        const result = await axios.post(`${config.domain}/employee/`,payload)
+        const result = await axios.post(`${config.domain}/job/`,payload)
         return result
     } catch (error) {
         return await error.message
@@ -11,7 +11,7 @@ const create = async (payload) => {
 }
 const read = async () => {
     try {
-        const result = await axios.get(`${config.domain}/employee/`)
+        const result = await axios.get(`${config.domain}/job/`)
         return result.data
     } catch (error) {
         return await error.message
@@ -19,7 +19,7 @@ const read = async () => {
 }
 const getOne = async (id) => {
     try {
-        const result = await axios.get(`${config.domain}/employee/${id}`)
+        const result = await axios.get(`${config.domain}/job/${id}`)
         return result.data
     } catch (error) {
         return await error.message
@@ -27,7 +27,7 @@ const getOne = async (id) => {
 }
 const update = async (data) => {
     try {
-        const result = await axios.put(`${config.domain}/employee/${data.id}`,data)
+        const result = await axios.put(`${config.domain}/job/${data.id}`,data)
         return result
     } catch (error) {
         return await error.message
@@ -36,7 +36,7 @@ const update = async (data) => {
 
 const deleted = async (id) => {
     try {
-        const result = await axios.delete(`${config.domain}/employee/${id}`)
+        const result = await axios.delete(`${config.domain}/job/${id}`)
         return result
     } catch (error) {
         return await error.message
