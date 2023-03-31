@@ -27,20 +27,23 @@ export default function RegionUpdateForm(props) {
         })
     }
     return (
-        <div>
-            <h2>Edit Region</h2>
+        <div class="container">
+          <div class="mb-3 mt-3">
+            <h4>Edit Region</h4>
+            <hr aria-setsize={2} />
+          </div>
             <form onSubmit={onEdit}>
-                <div>
+                <div class="mb-3">
                     <label>Region ID :</label>
-                    <input type='text' defaultValue={region.regionId} disabled></input>
+                    <input type='text' class='form-control' defaultValue={region.regionId} disabled></input>
                 </div>
-                <di>
+                <div class="mb-3">
                     <label>Region Name : </label>
-                    <input type='text' defaultValue={region.regionName} onChange={HandleChange('name')}></input>
-                </di>
-                <div>                    
-                    <button onClick={()=>props.setDisplay(false)}>Cancel</button>
-                    <button type='submit'>Update</button>
+                    <input type='text' class='form-control' defaultValue={region.regionName} onChange={HandleChange('name')}></input>
+                </div>
+                <div class="mb-3 text-end">                    
+                    <button class='btn btn-secondary' style={{ marginRight: "1rem" }} onClick={()=>props.setDisplay(false)}>Cancel</button>
+                    <button class='btn btn-primary' type='submit'>Update</button>
                 </div>
             </form>
         </div>

@@ -25,28 +25,31 @@ export default function LocationCreateForm(props) {
         })
     }
     return (
-        <div>
-            <h2>Add Location</h2>
+        <div class="container">
+          <div class="mb-3 mt-3">
+            <h4>Add Location</h4>
+            <hr aria-setsize={2} />
+          </div>
             <form onSubmit={onSubmit}>
-                <div>
+                <div class="mb-3">
                     <label>Street Address : </label>
-                    <input type='text' placeholder='Street Address' onChange={HandleChange('street')}></input>
+                    <input type='text' class='form-control' placeholder='Street Address' onChange={HandleChange('street')}></input>
                 </div>
-                <div>
+                <div class="mb-3">
                     <label>Postal Code : </label>
-                    <input type='text' placeholder='Postal Code' onChange={HandleChange('postal')}></input>
+                    <input type='text' class='form-control' placeholder='Postal Code' onChange={HandleChange('postal')}></input>
                 </div>
-                <div>
+                <div class="mb-3">
                     <label>City : </label>
-                    <input type='text' placeholder='City' onChange={HandleChange('city')}></input>
+                    <input type='text' class='form-control' placeholder='City' onChange={HandleChange('city')}></input>
                 </div>
-                <div>
+                <div class="mb-3">
                     <label>State Province : </label>
-                    <input type='text' placeholder='State Province' onChange={HandleChange('state')}></input>
+                    <input type='text' class='form-control' placeholder='State Province' onChange={HandleChange('state')}></input>
                 </div>
-                <div>                    
-                    <button onClick={()=>props.setDisplay(false)}>Cancel</button>
-                    <button type='submit'>Simpan</button>
+                <div class="mb-3 text-end">                    
+                    <button class='btn btn-secondary' style={{ marginRight: "1rem" }} onClick={()=>props.setDisplay(false)}>Cancel</button>
+                    <button class='btn btn-primary' type='submit'>Simpan</button>
                 </div>
             </form>
         </div>

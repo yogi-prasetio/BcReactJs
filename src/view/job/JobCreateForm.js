@@ -25,28 +25,31 @@ export default function JobCreateForm(props) {
         })
     }
     return (
-        <div>
-            <h2>Add Job</h2>
+        <div class="container">
+          <div class="mb-3 mt-3">
+            <h4>Add Job</h4>
+            <hr aria-setsize={2} />
+          </div>
             <form onSubmit={onSubmit}>
-                <div>
+                <div class="mb-3">
                     <label>Job id : </label>
-                    <input type='text' placeholder='Job ID' onChange={HandleChange('id')}></input>
+                    <input type='text' class='form-control' placeholder='Job ID' onChange={HandleChange('id')}></input>
                 </div>
-                <div>
+                <div class="mb-3">
                     <label>Job Title : </label>
-                    <input type='text' placeholder='Job Title' onChange={HandleChange('job_title')}></input>
+                    <input type='text' class='form-control' placeholder='Job Title' onChange={HandleChange('job_title')}></input>
                 </div>
-                <div>
+                <div class="mb-3">
                     <label>Min Salary : </label>
-                    <input type='number' placeholder='Min Salary' onChange={HandleChange('min_salary')}></input>
+                    <input type='number' class='form-control' placeholder='Min Salary' onChange={HandleChange('min_salary')}></input>
                 </div>
-                <div>
+                <div class="mb-3">
                     <label>Max Salary : </label>
-                    <input type='number' placeholder='Max Salary' onChange={HandleChange('max_salary')}></input>
+                    <input type='number' class='form-control' placeholder='Max Salary' onChange={HandleChange('max_salary')}></input>
                 </div>
-                <div>                    
-                    <button onClick={()=>props.setDisplay(false)}>Cancel</button>
-                    <button type='submit'>Simpan</button>
+                <div class="mb-3 text-end">
+                    <button class='btn btn-secondary' style={{ marginRight: "1rem" }} onClick={()=>props.setDisplay(false)}>Cancel</button>
+                    <button class='btn btn-primary' type='submit'>Simpan</button>
                 </div>
             </form>
         </div>

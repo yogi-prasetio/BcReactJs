@@ -27,20 +27,23 @@ export default function DepartmentUpdateForm(props) {
         })
     }
     return (
-        <div>
-            <h2>Edit Department</h2>
+        <div class="container">
+          <div class="mb-3 mt-3">
+            <h4>Edit Department</h4>
+            <hr aria-setsize={2} />
+          </div>
             <form onSubmit={onEdit}>
-                <div>
+                <div class="mb-3">
                     <label>Department ID :</label>
-                    <input type='text' defaultValue={department.departmentId} disabled></input>
+                    <input type='text' class='form-control' defaultValue={department.departmentId} disabled></input>
                 </div>
-                <di>
+                <div class="mb-3">
                     <label>Department Name : </label>
-                    <input type='text' defaultValue={department.departmentName} onChange={HandleChange('name')}></input>
-                </di>
-                <div>                    
-                    <button onClick={()=>props.setDisplay(false)}>Cancel</button>
-                    <button type='submit'>Update</button>
+                    <input type='text' class='form-control' defaultValue={department.departmentName} onChange={HandleChange('name')}></input>
+                </div>
+                <div class="mb-3 text-end">
+                    <button class='btn btn-secondary' style={{ marginRight: "1rem" }} onClick={()=>props.setDisplay(false)}>Cancel</button>
+                    <button class='btn btn-primary' type='submit'>Update</button>
                 </div>
             </form>
         </div>

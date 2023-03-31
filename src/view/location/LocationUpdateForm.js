@@ -33,32 +33,35 @@ export default function LocationUpdateForm(props) {
         })
     }
     return (
-        <div>
-            <h2>Edit Location</h2>
+        <div class="container">
+          <div class="mb-3 mt-3">
+            <h4>Edit Location</h4>
+            <hr aria-setsize={2} />
+          </div>
             <form onSubmit={onEdit}>
-                <div>
+                <div class="mb-3">
                     <label>Location ID :</label>
-                    <input type='text' defaultValue={location.locationId} disabled></input>
+                    <input type='text' class='form-control' defaultValue={location.locationId} disabled></input>
                 </div>
-                <div>
+                <div class="mb-3">
                     <label>Street Address : </label>
-                    <input type='text' defaultValue={location.streetAddress} onChange={HandleChange('street')}></input>
+                    <input type='text' class='form-control' defaultValue={location.streetAddress} onChange={HandleChange('street')}></input>
                 </div>
-                <div>
+                <div class="mb-3">
                     <label>Postal Code : </label>
-                    <input type='text' defaultValue={location.postalCode} onChange={HandleChange('postal')}></input>
+                    <input type='text' class='form-control' defaultValue={location.postalCode} onChange={HandleChange('postal')}></input>
                 </div>
-                <div>
+                <div class="mb-3">
                     <label>City : </label>
-                    <input type='text' defaultValue={location.city} onChange={HandleChange('city')}></input>
+                    <input type='text' class='form-control' defaultValue={location.city} onChange={HandleChange('city')}></input>
                 </div>
-                <div>
+                <div class="mb-3">
                     <label>State Province : </label>
-                    <input type='text' defaultValue={location.stateProvince} onChange={HandleChange('state')}></input>
+                    <input type='text' class='form-control' defaultValue={location.stateProvince} onChange={HandleChange('state')}></input>
                 </div>
-                <div>                    
-                    <button onClick={()=>props.setDisplay(false)}>Cancel</button>
-                    <button type='submit'>Update</button>
+                <div class="mb-3 text-end">                    
+                    <button class='btn btn-secondary' style={{ marginRight: "1rem" }} onClick={()=>props.setDisplay(false)}>Cancel</button>
+                    <button class='btn btn-primary' type='submit'>Update</button>
                 </div>
             </form>
         </div>

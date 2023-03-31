@@ -19,16 +19,19 @@ export default function DepartmentCreateForm(props) {
         })
     }
     return (
-        <div>
-            <h2>Add Department</h2>
+        <div class="container">
+          <div class="mb-3 mt-3">
+            <h4>Add Department</h4>
+            <hr aria-setsize={2} />
+          </div>
             <form onSubmit={onSubmit}>
-                <di>
+                <div class="mb-3">
                     <label>Department Name : </label>
-                    <input type='text' placeholder='Department name' onChange={HandleChange('name')}></input>
-                </di>
-                <div>                    
-                    <button onClick={()=>props.setDisplay(false)}>Cancel</button>
-                    <button type='submit'>Simpan</button>
+                    <input type='text' class='form-control' placeholder='Department name' onChange={HandleChange('name')}></input>
+                </div>
+                <div class="mb-3 text-end ">
+                    <button class='btn btn-secondary' style={{ marginRight: "1rem" }} onClick={()=>props.setDisplay(false)}>Cancel</button>
+                    <button class='btn btn-primary' type='submit'>Simpan</button>
                 </div>
             </form>
         </div>

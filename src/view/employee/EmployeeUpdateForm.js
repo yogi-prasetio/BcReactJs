@@ -37,40 +37,43 @@ export default function EmployeeUpdateForm(props) {
         })
     }
     return (
-        <div>
-            <h2>Edit Employee</h2>
+        <div class="container">
+          <div class="mb-3 mt-3">
+            <h4>Edit Employee</h4>
+            <hr aria-setsize={2} />
+          </div>
             <form onSubmit={onEdit}>
-                <div>
+                <div class="mb-3">
                     <label>Employee ID :</label>
-                    <input type='text' defaultValue={employee.employeeId} disabled></input>
+                    <input type='text' class='form-control' defaultValue={employee.employeeId} disabled></input>
                 </div>
-                <div>
+                <div class="mb-3">
                     <label>First Name : </label>
-                    <input type='text' defaultValue={employee.firstName} onChange={HandleChange('firstName')}></input>
+                    <input type='text' class='form-control' defaultValue={employee.firstName} onChange={HandleChange('firstName')}></input>
                 </div>
-                <div>
+                <div class="mb-3">
                     <label>Last Name : </label>
-                    <input type='text' defaultValue={employee.lastName} onChange={HandleChange('lastName')}></input>
+                    <input type='text' class='form-control' defaultValue={employee.lastName} onChange={HandleChange('lastName')}></input>
                 </div>
-                <div>
+                <div class="mb-3">
                     <label>Email : </label>
-                    <input type='text' defaultValue={employee.email} onChange={HandleChange('email')}></input>
+                    <input type='text' class='form-control' defaultValue={employee.email} onChange={HandleChange('email')}></input>
                 </div>
                 <div>
                     <label>Phone Number : </label>
-                    <input type='text' defaultValue={employee.phoneNumber} onChange={HandleChange('phone')}></input>
+                    <input type='text' class='form-control' defaultValue={employee.phoneNumber} onChange={HandleChange('phone')}></input>
                 </div>
-                <div>
+                <div class="mb-3">
                     <label>Hire Date : </label>
-                    <input type='date' defaultValue={employee.hireDate} onChange={HandleChange('hire')}></input>
+                    <input type='date' class='form-control' defaultValue={employee.hireDate} onChange={HandleChange('hire')}></input>
                 </div>
-                <div>
+                <div class="mb-3">
                     <label>Salary : </label>
-                    <input type='number' defaultValue={employee.salary} onChange={HandleChange('salary')}></input>
+                    <input type='number' class='form-control' defaultValue={employee.salary} onChange={HandleChange('salary')}></input>
                 </div>
-                <div>                    
-                    <button onClick={()=>props.setDisplay(false)}>Cancel</button>
-                    <button type='submit'>Update</button>
+                <div class="mb-3 text-end">       
+                    <button class='btn btn-secondary' style={{ marginRight: "1rem" }} onClick={()=>props.setDisplay(false)}>Cancel</button>
+                    <button class='btn btn-primary' type='submit'>Update</button>
                 </div>
             </form>
         </div>
